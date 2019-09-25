@@ -50,25 +50,23 @@ class _MyHomePageState extends State<MyHomePage> {
                 subtitle: Padding(padding: EdgeInsets.only(
                   top:10),
                      child: new Row(
-                       // mainAxisSize: MainAxisSize.max,
-                       //mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                        children: <Widget>[
-                         new Icon(Icons.account_circle),
+                         new Icon(Icons.account_circle,size: 20),
                          new Text('8,432',style: TextStyle(fontSize: 11,fontWeight: FontWeight.w300),),
                          new Padding(
-                           padding: EdgeInsets.only(left: 10.0),
+                           padding: EdgeInsets.only(left: 15.0),
                            child: Row(
                              children: <Widget>[
-                               new Icon(Icons.timer),
+                               new Icon(Icons.timer,size: 20),
                                new Text('10:20 am',style: TextStyle(fontSize: 11,fontWeight: FontWeight.w300),),
                              ],
                            ),
                          ),
                          new Padding(
-                             padding: EdgeInsets.only(left: 10.0,right: 5.0),
+                             padding: EdgeInsets.only(left: 15.0,right: 5.0),
                              child: Row(
                                children: <Widget>[
-                                 new Icon(Icons.calendar_today),
+                                 new Icon(Icons.calendar_today,size: 20),
                                  new Text('12-08-2019',style: TextStyle(fontSize: 11,fontWeight: FontWeight.w300),),
                                ],
                              )
@@ -94,22 +92,22 @@ class _MyHomePageState extends State<MyHomePage> {
                     // mainAxisSize: MainAxisSize.max,
                     //mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: <Widget>[
-                      new Icon(Icons.account_circle),
+                      new Icon(Icons.account_circle,size: 20,),
                       new Text('8,432',style: TextStyle(fontSize: 11,fontWeight: FontWeight.w300),),
                       new Padding(
-                        padding: EdgeInsets.only(left: 10.0),
+                        padding: EdgeInsets.only(left: 15.0),
                         child: Row(
                           children: <Widget>[
-                            new Icon(Icons.timer),
+                            new Icon(Icons.timer,size: 20),
                             new Text('10:20 am',style: TextStyle(fontSize: 11,fontWeight: FontWeight.w300),),
                           ],
                         ),
                       ),
                       new Padding(
-                          padding: EdgeInsets.only(left: 10.0,right: 5.0),
+                          padding: EdgeInsets.only(left: 15.0,right: 5.0),
                           child: Row(
                             children: <Widget>[
-                              new Icon(Icons.calendar_today),
+                              new Icon(Icons.calendar_today,size: 20),
                               new Text('12-08-2019',style: TextStyle(fontSize: 11,fontWeight: FontWeight.w300),),
                             ],
                           )
@@ -132,25 +130,23 @@ class _MyHomePageState extends State<MyHomePage> {
                 subtitle: Padding(padding: EdgeInsets.only(
                     top:10),
                   child: new Row(
-                    // mainAxisSize: MainAxisSize.max,
-                    //mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: <Widget>[
                       new Icon(Icons.account_circle),
                       new Text('8,432',style: TextStyle(fontSize: 11,fontWeight: FontWeight.w300),),
                       new Padding(
-                        padding: EdgeInsets.only(left: 10.0),
+                        padding: EdgeInsets.only(left: 15.0),
                         child: Row(
                           children: <Widget>[
-                            new Icon(Icons.timer),
+                            new Icon(Icons.timer,size: 20),
                             new Text('10:20 am',style: TextStyle(fontSize: 11,fontWeight: FontWeight.w300),),
                           ],
                         ),
                       ),
                       new Padding(
-                          padding: EdgeInsets.only(left: 10.0,right: 5.0),
+                          padding: EdgeInsets.only(left: 15.0,right: 5.0),
                           child: Row(
                             children: <Widget>[
-                              new Icon(Icons.calendar_today),
+                              new Icon(Icons.calendar_today,size: 20),
                               new Text('12-08-2019',style: TextStyle(fontSize: 11,fontWeight: FontWeight.w300),),
                             ],
                           )
