@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:qr_flutter/qr_flutter.dart';
+import 'package:intl/intl.dart';
+import 'package:datetime_picker_formfield/datetime_picker_formfield.dart';
 
-final String data = "123456";
 
 class ProfileCardView extends StatelessWidget {
   @override
@@ -49,9 +50,35 @@ class ProfileCardView extends StatelessWidget {
 }
 
 class QrCodeGenerator extends StatelessWidget {
+  final String data = "123456";
+
   @override
   Widget build(BuildContext context) {
     return QrImage(data: data,size: 300);
+  }
+}
+
+class TopCalender extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+        padding: const EdgeInsets.all(10.0),
+      child: Column(
+        children: <Widget>[
+          DateTimePickerFormField(
+           inputType: InputType.date,
+           format: DateFormat("yyyy-MM-dd"),
+           initialDate: DateTime(2019, 1, 1),
+           editable: false,
+           decoration: InputDecoration(
+            labelText: 'Date',
+            icon: Icon(Icons.calendar_today),
+            hasFloatingPlaceholder: false
+          )
+          )
+        ],
+      ),
+    );
   }
 
 }
