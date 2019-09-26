@@ -1,5 +1,8 @@
 import 'package:dare/model/common.dart';
 import 'package:flutter/material.dart';
+import 'package:barcode_scan/barcode_scan.dart';
+import 'dart:async';
+import 'package:flutter/services.dart';
 
 void main() => runApp(MyApp());
 
@@ -19,8 +22,6 @@ class MyApp extends StatelessWidget {
 }
 
 class MyHomePage extends StatefulWidget {
- // MyHomePage({Key key, this.title}) : super(key: key);
-
 
   @override
   _MyHomePageState createState() => _MyHomePageState();
@@ -257,7 +258,7 @@ class QRCodeGenerator extends StatelessWidget {
           ),
         ),
       appBar: AppBar(
-        title: Text("Your Qr Code Generated"),
+        title: Text("Your Profile"),
       ),
       body: Align(
         alignment: Alignment.center,
@@ -268,9 +269,9 @@ class QRCodeGenerator extends StatelessWidget {
 }
 
 class TopCalenderDate extends StatelessWidget {
+
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
     return Scaffold(
       drawer: Drawer(
         child: ListView(
@@ -363,5 +364,6 @@ class TopCalenderDate extends StatelessWidget {
       ),
     );
   }
-
 }
+
+
