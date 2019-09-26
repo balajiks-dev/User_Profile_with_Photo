@@ -40,32 +40,85 @@ class _MyHomePageState extends State<MyHomePage> {
           padding: EdgeInsets.zero,
           children: <Widget>[
             DrawerHeader(
-                child: Image.network('https://miro.medium.com/max/400/1*gH1iKXJH8T12LIqhboZWEA.png'),
+                child: Container(
+                  child: Column(
+                    children: <Widget>[
+                      Material(
+                        borderRadius: BorderRadius.all(Radius.circular(30.0)),
+                        child: Image.network('https://miro.medium.com/max/400/1*gH1iKXJH8T12LIqhboZWEA.png',height: 100,width: 100,),
+                      ),
+                      Padding(padding: EdgeInsets.all(4.0),child: Text('Defence Profile',style: TextStyle(color: Colors.white,fontSize: 20.0),),),
+                    ],
+                  ),
+                ),
               decoration: BoxDecoration(
-                color: Colors.greenAccent,
+                color: Colors.lightGreen,
               ),
             ),
-            ListTile(
-              title: Text('Dashboard'),
-              leading: Icon(Icons.dashboard),
-              trailing: Icon(Icons.arrow_right),
+            new Card(
+              child: Column(
+                children: <Widget>[
+                  new Container(
+                    color: Colors.grey,
+                    child:   ListTile(
+                      title: Text('Dashboard'),
+                      leading: Icon(Icons.dashboard),
+                      trailing: Icon(Icons.arrow_right),
+                    ),
+                  ),
+                  Divider(),
+                  new Container(
+                    child: ListTile(
+                      title: Text('Account Details'),
+                      leading: Icon(Icons.accessibility),
+                      trailing: Icon(Icons.arrow_right),
+                    ),
+                  ),
+                  Divider(),
+                  new Container(
+                    child: ListTile(
+                      title: Text('Profile'),
+                      leading: Icon(Icons.person),
+                      trailing: Icon(Icons.arrow_right),
+                    ),
+                  ),
+                ],
+              ),
             ),
-            Divider(),
-            ListTile(
-              title: Text('Profile'),
-              leading: Icon(Icons.person),
-              trailing: Icon(Icons.arrow_right),
-            ),
-            Divider(),
-            ListTile(
-              title: Text('Account Details'),
-              leading: Icon(Icons.accessibility),
-              trailing: Icon(Icons.arrow_right),
-            ),
-            Divider()
           ],
         ),
       ),
+        floatingActionButtonLocation:
+        FloatingActionButtonLocation.centerDocked,
+        floatingActionButton: FloatingActionButton(
+          child: const Icon(Icons.camera_alt), onPressed: () {
+         // Navigator.push(context, MaterialPageRoute(builder: (context) => buttonChange()),);
+
+        },),
+
+        bottomNavigationBar: BottomNavigationBar(
+          type: BottomNavigationBarType.fixed,
+          currentIndex: 0, // this will be set when a new tab is tapped
+          items: [
+            BottomNavigationBarItem(
+              icon: new Icon(Icons.dashboard),
+              title: new Text('DashBoard'),
+              backgroundColor: Colors.grey,
+            ),
+            BottomNavigationBarItem(
+              icon: new Icon(Icons.calendar_today),
+              title: new Text('Calender'),
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.list),
+              title: Text('HorseList'),
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.more),
+              title: Text('More'),
+            )
+          ],
+        ),
       body: ListView(
         children: <Widget>[
           DrawerView(),
