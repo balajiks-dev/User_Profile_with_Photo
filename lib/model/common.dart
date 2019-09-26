@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class DrawerView extends StatelessWidget {
+class ProfileCardView extends StatelessWidget {
   @override
   Widget build(BuildContext context){
     return Card(
