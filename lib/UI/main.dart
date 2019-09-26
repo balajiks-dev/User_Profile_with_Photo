@@ -1,6 +1,7 @@
 import 'package:dare/model/common.dart';
 import 'package:flutter/material.dart';
 
+
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
@@ -96,7 +97,11 @@ class _MyHomePageState extends State<MyHomePage> {
           child: FittedBox(
              child: FloatingActionButton(
                child: const Icon(Icons.camera_alt, size: 30.0,), onPressed: () {
-              },),
+               Navigator.push(
+                   context,
+                   MaterialPageRoute(builder: (context) => QRCodeGenerator()),
+               );
+               }),
           ),
         ),
 
@@ -132,4 +137,20 @@ class _MyHomePageState extends State<MyHomePage> {
       // This trailing comma makes auto-formatting nicer for build methods.
     );
   }
+}
+
+class QRCodeGenerator extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("Your Qr Code Generated"),
+      ),
+      body: Align(
+        alignment: Alignment.center,
+        child: QrCodeGenerator(),
+      )
+    );
+  }
+
 }

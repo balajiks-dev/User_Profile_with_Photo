@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:qr_flutter/qr_flutter.dart';
+
+final String data = "123456";
 
 class ProfileCardView extends StatelessWidget {
   @override
@@ -43,4 +46,12 @@ class ProfileCardView extends StatelessWidget {
               ),
             );
   }
+}
+
+class QrCodeGenerator extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return QrImage(data: data,size: 300);
+  }
+
 }
