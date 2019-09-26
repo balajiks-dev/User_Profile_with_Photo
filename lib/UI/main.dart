@@ -90,11 +90,15 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
         floatingActionButtonLocation:
         FloatingActionButtonLocation.centerDocked,
-        floatingActionButton: FloatingActionButton(
-          child: const Icon(Icons.camera_alt), onPressed: () {
-         // Navigator.push(context, MaterialPageRoute(builder: (context) => buttonChange()),);
-
-        },),
+        floatingActionButton: Container(
+          height: 40,
+          width: 40,
+          child: FittedBox(
+             child: FloatingActionButton(
+               child: const Icon(Icons.camera_alt, size: 30.0,), onPressed: () {
+              },),
+          ),
+        ),
 
         bottomNavigationBar: BottomNavigationBar(
           type: BottomNavigationBarType.fixed,
